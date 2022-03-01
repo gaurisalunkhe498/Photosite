@@ -1,0 +1,19 @@
+<h1> Photosite User List</h1>
+<body>
+<table>
+  <tr style="...">
+    <th style="..."> Index </th>
+    <th style="..."> Firstname </th>
+    <th style="..."> Lastname </th>
+
+  </tr>
+  <% @users.each do |user| %>
+    <tr>
+      <th style="..."><%= link_to user.id, user_photos_path(user.id) %> </th>
+      <th style="..."><%= link_to user.first_name, user_photos_path(user.id) %> </th>
+      <th style="..."><%= link_to user.last_name, user_photos_path(user.id) %> </th>
+    </tr>
+
+  <%end %>
+</table>
+</body>
